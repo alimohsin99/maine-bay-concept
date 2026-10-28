@@ -142,13 +142,59 @@ footer .brand{color:#fff}
  .note{padding:1.4rem}
  .map,.map iframe{min-height:320px}
 }
+
+/* expanded */
+.alt{background:var(--sand)}
+.sea{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.sea article{background:#fff;border-radius:4px;overflow:hidden}
+.sea .im{aspect-ratio:3/2;overflow:hidden}.sea img{width:100%;height:100%;object-fit:cover}
+.sea .tx{padding:1.5rem 1.5rem 1.8rem}.sea h3{font-size:1.7rem;color:var(--bay);margin-bottom:.5rem}
+.sea p{color:var(--mute);font-size:.94rem}.sea .tip{margin-top:.9rem;font-size:.8rem;color:var(--berry);letter-spacing:.04em}
+.sea .noimg .tx{padding-top:2rem;border-top:4px solid var(--bay)}
+.pantry{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.pantry img{border-radius:4px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.plist{margin-top:2rem;border-top:1px solid var(--line)}
+.plist div{padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.plist h4{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--bay)}
+.plist p{color:var(--mute);font-size:.92rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;counter-reset:s}
+.steps div{padding:2.2rem 1.8rem;border:1px solid var(--line);border-radius:4px;background:var(--cream);position:relative}
+.steps div::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-style:italic;font-size:3.2rem;color:var(--berry);line-height:1;display:block;margin-bottom:1rem}
+.steps h3{font-size:1.6rem;color:var(--bay);margin-bottom:.5rem}.steps p{color:var(--mute);font-size:.94rem}
+.meet{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
+.tl{border-left:1px solid var(--line);padding-left:1.8rem}
+.tl div{position:relative;padding-bottom:1.8rem}
+.tl div::before{content:"";position:absolute;left:calc(-1.8rem - 5px);top:.45rem;width:9px;height:9px;border-radius:50%;background:var(--berry)}
+.tl b{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--bay);display:block}
+.tl p{color:var(--mute);font-size:.94rem}
+.fresh{background:linear-gradient(rgba(16,38,58,.55),rgba(16,38,58,.7)),url(stock-lobster-boat.jpg) center/cover;color:#fff}
+.fresh .box{max-width:640px;background:rgba(250,246,239,.96);color:var(--ink);padding:clamp(2rem,5vw,3.5rem);border-radius:4px}
+.fresh ul{list-style:none;margin:1.5rem 0}.fresh li{padding:.75rem 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:1rem}
+.fresh li span:last-child{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--berry)}
+.cook{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.cook ol{margin:1.5rem 0 0 1.2rem;color:var(--mute)}.cook li{padding:.45rem 0}
+.cook img{border-radius:4px;aspect-ratio:1;object-fit:cover;width:100%}
+.faq{max-width:860px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:1.3rem 0}
+.faq summary{cursor:pointer;font-family:var(--serif);font-size:1.45rem;color:var(--bay);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::after{content:"+";color:var(--berry)}.faq details[open] summary::after{content:"\2212"}
+.faq p{color:var(--mute);margin-top:.8rem}
+.press{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.press a{display:block;text-decoration:none;padding:2rem;border:1px solid var(--line);border-radius:4px;background:#fff;transition:.3s}
+.press a:hover{border-color:var(--berry)}
+.press small{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--berry)}
+.press h3{font-size:1.45rem;color:var(--bay);margin:.7rem 0}.press p{font-size:.9rem;color:var(--mute)}
+.follow{text-align:center;background:var(--berry);color:#fff;padding:clamp(4rem,8vw,6rem) 0}
+.follow h2{color:#fff}.follow p{max-width:50ch;margin:1rem auto 2rem;opacity:.9}
+@media (max-width:960px){.sea,.steps,.press{grid-template-columns:1fr 1fr}.pantry,.meet,.cook{grid-template-columns:1fr}}
+@media (max-width:600px){.sea,.steps,.press{grid-template-columns:1fr}.faq summary{font-size:1.25rem}}
 </style>
 </head>
 <body>
 <header class="nav" id="nav"><div class="wrap">
  <a class="brand" href="#top"><img src="mbb-logo.png" alt="Maine Bay &amp; Berry logo"><span>Maine Bay &amp; Berry</span></a>
  <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
- <ul id="menu"><li><a href="#story">Our Story</a></li><li><a href="#offer">What We Offer</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Visit</a></li><li><a href="#contact">Contact</a></li></ul>
+ <ul id="menu"><li><a href="#story">Our Story</a></li><li><a href="#seafood">Seafood</a></li><li><a href="#pantry">Pantry</a></li><li><a href="#ordering">Ordering</a></li><li><a href="#faq">FAQ</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Visit</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></header>
 
 <section class="hero" id="top" style="padding:0">
@@ -192,6 +238,95 @@ footer .brand{color:#fff}
  <div class="note rv"><p>Want something set aside? <em>Call or message us</em> and we will have it ready.</p><a class="btn btn-bay" href="tel:+18149541560">814.954.1560</a></div>
 </div></section>
 
+
+<section class="alt" id="seafood"><div class="wrap">
+ <div class="head"><div><div class="eyebrow rv">The Seafood Counter</div><h2 class="rv" style="margin-top:1rem">Swimming in Maine <em>days ago.</em></h2></div>
+ <p class="rv">Our coolers are stocked from fishermen Shaun knows personally, or small businesses he can vouch for. Even our fresh frozen seafood is harvested the day before pickup and flash frozen. Availability changes run to run, so check Facebook or call.</p></div>
+ <div class="sea">
+  <article class="rv"><div class="im"><img src="stock-lobster.jpg" alt="Maine lobster"></div><div class="tx"><h3>Live Maine lobster</h3><p>The heart of the counter. Brought down from the coast for lobster boils, rolls and special dinners.</p><div class="tip">Reserve ahead for holidays and parties.</div></div></article>
+  <article class="rv"><div class="im"><img src="stock-sea-scallops.jpg" alt="Seared sea scallops"></div><div class="tx"><h3>Sea scallops</h3><p>Sweet, meaty scallops that were part of Shaun's very first truckloads home for friends.</p><div class="tip">Ask what came in on the latest run.</div></div></article>
+  <article class="rv"><div class="im"><img src="stock-oysters.jpg" alt="Oysters on ice"></div><div class="tx"><h3>Oysters</h3><p>Fresh from New England waters, ready for the half shell or the grill.</p><div class="tip">Ask us about this week's selection.</div></div></article>
+  <article class="rv"><div class="im"><img src="stock-salmon.jpg" alt="Salmon steaks"></div><div class="tx"><h3>Salmon</h3><p>Rich, clean fish for weeknight dinners and weekend grilling.</p><div class="tip">Call ahead to have it set aside.</div></div></article>
+  <article class="rv noimg"><div class="tx"><h3>Live crab</h3><p>Live crabs alongside the lobsters when the boats bring them in. A true taste of the Maine coast.</p><div class="tip">Supply varies by season. Call to check.</div></div></article>
+  <article class="rv noimg"><div class="tx"><h3>Littleneck clams</h3><p>Small, tender clams for steaming, chowder or pasta night.</p><div class="tip">Order by Wednesday 5pm for Thursday pickup.</div></div></article>
+ </div>
+</div></section>
+
+<section id="pantry"><div class="wrap pantry">
+ <img class="rv" src="stock-blueberry-barrens.jpg" alt="Wild blueberry barren in Jonesboro, Maine">
+ <div>
+  <div class="eyebrow rv">The Maine Pantry</div>
+  <h2 class="rv" style="margin:1rem 0 1.2rem">More than 15 small Maine <em>makers.</em></h2>
+  <p class="rv" style="color:var(--mute)">Seafood is not everyone's thing, so the Berry side of the shop is stocked with the best of what Maine grows and makes. A whole wall of wooden shelves, all from socially responsible small businesses in Maine.</p>
+  <div class="plist">
+   <div class="rv"><h4>Two Fat Cats Bakery, Portland</h4><p>Woman-owned bakery behind our biggest seller, the three-pound New England Bog Pie made with wild cranberries and wild blueberries, plus their wild Maine blueberry pie.</p></div>
+   <div class="rv"><h4>Wescogus Blueberry Farm</h4><p>Dell and Marie Emerson's family farm, home of the world's largest blueberry, growing wild Maine blueberries that have never been planted.</p></div>
+   <div class="rv"><h4>Jams, syrups, salts &amp; sauces</h4><p>Maine-made pantry staples and cooking sauces, with new partners added regularly.</p></div>
+   <div class="rv"><h4>Sodas, soaps &amp; dog treats</h4><p>Small craft root beer, wild blueberry soda, homemade soaps, and blueberry-infused dog treats.</p></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="alt" id="ordering"><div class="wrap">
+ <div class="head"><div><div class="eyebrow rv">How Ordering Works</div><h2 class="rv" style="margin-top:1rem">Simple, personal, <em>no checkout.</em></h2></div><p class="rv">We would rather get to know you than process a cart. Here is how to make sure your seafood is waiting.</p></div>
+ <div class="steps">
+  <div class="rv"><h3>Call or message</h3><p>Reach us at 814.954.1560 or on Facebook by 5pm Wednesday with what you would like.</p></div>
+  <div class="rv"><h3>Pick up Thursday</h3><p>Orders placed by the Wednesday cutoff are guaranteed for pickup on Thursday.</p></div>
+  <div class="rv"><h3>Or just stop in</h3><p>Browse the coolers and pantry shelves at 201 Elmwood Street any day we are open.</p></div>
+ </div>
+</div></section>
+
+<section id="meet"><div class="wrap meet">
+ <div>
+  <div class="eyebrow rv">Meet Shaun &amp; Christa</div>
+  <h2 class="rv" style="margin:1rem 0 1.4rem">A truck full of <em>seafood, and an idea.</em></h2>
+  <p class="rv" style="color:var(--mute);margin-bottom:1rem">Shaun was born and raised in Winter Harbor, Maine, and taught management at Penn State's Smeal College of Business for 15 years. Christa earned her business degree at Penn State and worked in the Executive MBA program. They met at Smeal.</p>
+  <p class="rv" style="color:var(--mute)">Whenever Shaun went home to Maine, he emailed about 130 friends offering to bring back lobster, scallops and blueberries. The truck always came back full. Christa kept telling him it should be a business, and one summer night on the drive home, they found their spot.</p>
+ </div>
+ <div class="tl">
+  <div class="rv"><b>Winter Harbor roots</b><p>A coastal town where you knew everybody, and the bay was part of daily life.</p></div>
+  <div class="rv"><b>August 1, 2017</b><p>Maine Bay &amp; Berry opens in a former produce stand on Shiloh Road, decorated with buoys like a true Maine seafood shack.</p></div>
+  <div class="rv"><b>January 2018</b><p>A second, year-round home opens at The Barn at Lemont on Elmwood Street.</p></div>
+  <div class="rv"><b>The 12-hour drive</b><p>Shaun has made the trek to Maine three or four times a month to bring the catch back himself.</p></div>
+  <div class="rv"><b>Today</b><p>201 Elmwood Street, State College, with 15+ Maine partners on the shelves.</p></div>
+ </div>
+</div></section>
+
+<section class="fresh"><div class="wrap">
+ <div class="box rv">
+  <div class="eyebrow">What's Fresh This Week</div>
+  <h2 style="font-size:clamp(2rem,4vw,3rem);margin:.8rem 0 .4rem">Straight off <em>the latest run.</em></h2>
+  <p style="color:var(--mute)">Our list changes with every trip to the coast and every season. Here is the kind of thing you will find. For the exact list, check our Facebook feed or give us a call.</p>
+  <ul><li><span>Live lobster</span><span>Most weeks</span></li><li><span>Scallops, oysters &amp; clams</span><span>Ask in store</span></li><li><span>Salmon &amp; fresh fish</span><span>Varies</span></li><li><span>Wild Maine blueberries</span><span>Seasonal</span></li><li><span>Two Fat Cats pies</span><span>While they last</span></li></ul>
+  <a class="btn btn-bay" href="tel:+18149541560">Call for today's list</a>
+ </div>
+</div></section>
+
+<section id="cook"><div class="wrap cook">
+ <div>
+  <div class="eyebrow rv">From Our Kitchen to Yours</div>
+  <h2 class="rv" style="margin:1rem 0 1rem">How to steam <em>a Maine lobster.</em></h2>
+  <p class="rv" style="color:var(--mute)">The classic, no-fuss way. Ask us in store for tips on cooking anything you pick up.</p>
+  <ol class="rv">
+   <li>Bring about two inches of salted water to a rolling boil in a large pot with a steaming rack.</li>
+   <li>Add the live lobsters head first, cover tightly, and start your timer.</li>
+   <li>Steam roughly 12 to 15 minutes for a 1 to 1.25 lb lobster, a few minutes more for larger ones.</li>
+   <li>They are done when the shells are bright red and the meat is opaque white.</li>
+   <li>Serve with melted butter and lemon. Corn on the cob is optional but encouraged.</li>
+  </ol>
+ </div>
+ <img class="rv" src="stock-lobster.jpg" alt="Steamed lobsters on a plate">
+</div></section>
+
+<section class="alt" id="press"><div class="wrap">
+ <div class="head"><div><div class="eyebrow rv">In the Press</div><h2 class="rv" style="margin-top:1rem">As featured <em>in Central PA.</em></h2></div></div>
+ <div class="press">
+  <a class="rv" target="_blank" rel="noopener" href="https://www.statecollege.com/town-and-gown/down-east-in-centre-county-maine-bay-berry-brings-a-new-england-flavor-to-the-barn-at-lemont/"><small>Town&amp;Gown &middot; 2018</small><h3>Down East in Centre County</h3><p>The story of the Shiloh Road stand, The Barn at Lemont, and lobsters pulled from the water by hand.</p></a>
+  <a class="rv" target="_blank" rel="noopener" href="https://wpsu.org/digital/im-your-neighbor/shaun-knight-christa-stofferahn-maine-bay-berry/"><small>WPSU &middot; I'm Your Neighbor &middot; 2024</small><h3>Shaun Knight &amp; Christa Stofferahn</h3><p>A short film on the Maine roots behind the business.</p></a>
+  <a class="rv" target="_blank" rel="noopener" href="https://www.centredaily.com/living/food-drink/article223867360.html"><small>Centre Daily Times</small><h3>Products from Maine, in State College</h3><p>A look at the Maine families and makers stocked on our shelves.</p></a>
+ </div>
+</div></section>
+
 <section class="gallery" id="gallery"><div class="wrap">
  <div class="head"><div><div class="eyebrow rv">Gallery</div><h2 class="rv" style="margin-top:1rem">A taste of <em>Down East.</em></h2></div><p class="rv">Scenes from the coast that inspires everything we carry.</p></div>
  <div class="g rv">
@@ -202,6 +337,12 @@ footer .brand{color:#fff}
   <figure><img src="stock-wild-blueberries.jpg" alt="Wild blueberries"></figure>
   <figure><img src="stock-boathouse.jpg" alt="Maine boathouse"></figure>
   <figure class="a" style="grid-row:span 1"><img src="stock-blueberry-pie.jpg" alt="Blueberry pie"></figure>
+  <figure><img src="stock-oysters.jpg" alt="Oysters"></figure>
+  <figure><img src="stock-sea-scallops.jpg" alt="Scallops"></figure>
+  <figure class="a" style="grid-row:span 1"><img src="stock-lobster-boat.jpg" alt="Lobster boat in Casco Bay"></figure>
+  <figure class="a" style="grid-row:span 1"><img src="stock-blueberry-barrens.jpg" alt="Blueberry barrens"></figure>
+  <figure><img src="stock-salmon.jpg" alt="Salmon"></figure>
+  <figure><img src="mbb-surf-rocks.jpg" alt="Maine surf" style="object-position:right"></figure>
  </div>
 </div></section>
 
@@ -217,6 +358,28 @@ footer .brand{color:#fff}
  <div class="map rv"><iframe title="Map to Maine Bay & Berry" loading="lazy" src="https://maps.google.com/maps?q=201%20Elmwood%20Street%2C%20State%20College%2C%20PA%2016801&z=15&output=embed"></iframe></div>
 </div></section>
 
+
+<section id="faq"><div class="wrap">
+ <div class="head" style="justify-content:center;text-align:center"><div><div class="eyebrow rv">FAQ</div><h2 class="rv" style="margin-top:1rem">Good <em>questions.</em></h2></div></div>
+ <div class="faq">
+  <details class="rv" open><summary>What are your hours?</summary><p>Monday to Saturday 10am to 6:30pm, and Sunday 11:30am to 4:30pm.</p></details>
+  <details class="rv"><summary>Are you open on holidays?</summary><p>We are closed for all major holidays. Plan holiday seafood orders ahead.</p></details>
+  <details class="rv"><summary>How do I reserve fresh seafood?</summary><p>Call 814.954.1560 or message us on Facebook by 5pm Wednesday for guaranteed pickup on Thursday.</p></details>
+  <details class="rv"><summary>Do you ship or deliver?</summary><p>We are a shop you visit. Orders are picked up in store at 201 Elmwood Street, State College.</p></details>
+  <details class="rv"><summary>How do I find out what is in stock?</summary><p>Our Facebook page lists available fresh products. You are also welcome to call.</p></details>
+  <details class="rv"><summary>Where does the seafood come from?</summary><p>Directly from Maine and New England fishermen Shaun knows personally, or small businesses he can vouch for. Shaun drives to Maine himself to bring it back.</p></details>
+  <details class="rv"><summary>I do not eat seafood. Is there anything for me?</summary><p>Plenty. Wild Maine blueberries, Two Fat Cats pies, jams, syrups, sauces, craft sodas, soaps and even blueberry dog treats.</p></details>
+  <details class="rv"><summary>Do you work with restaurants or caterers?</summary><p>We have been open to it from the start. Give us a call to talk it through.</p></details>
+ </div>
+</div></section>
+
+<section class="follow"><div class="wrap rv">
+ <div class="eyebrow" style="color:#f3d9e8">Follow Along</div>
+ <h2 style="margin-top:1rem">Never miss <em style="color:#f3d9e8">a fresh run.</em></h2>
+ <p>Our weekly fresh list, new Maine partners and seasonal arrivals are posted on Facebook first. Join our 29K followers.</p>
+ <a class="btn btn-light" target="_blank" rel="noopener" href="https://www.facebook.com/mainebb/">Follow on Facebook</a>
+</div></section>
+
 <section class="contact" id="contact"><div class="wrap">
  <div class="eyebrow rv">Contact</div>
  <h2 class="rv">Questions, special requests, <em>or a big order?</em></h2>
@@ -224,7 +387,7 @@ footer .brand{color:#fff}
  <div class="ways rv">
   <a href="tel:+18149541560"><small>Call</small><strong>814.954.1560</strong></a>
   <a href="mailto:mainebayandberry@gmail.com"><small>Email</small><strong>mainebayandberry@gmail.com</strong></a>
-  <a href="https://www.facebook.com/search/top?q=maine%20bay%20and%20berry" target="_blank" rel="noopener"><small>Follow</small><strong>Facebook</strong></a>
+  <a href="https://www.facebook.com/mainebb/" target="_blank" rel="noopener"><small>Follow</small><strong>Facebook</strong></a>
  </div>
 </div></section>
 
