@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maine Bay &amp; Berry Co. | Fresh Maine Seafood in State College, PA</title>
+<meta name="description" content="Fresh seafood driven down from Maine, plus wild blueberries, jams, syrups and pies from small Maine makers. 201 Elmwood Street, State College, PA.">
+<link rel="icon" href="mbb-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bay:#1c3a52;--bay-d:#10263a;--berry:#6e2a57;--berry-l:#a4568a;--sand:#efe6d6;--cream:#faf6ef;--ink:#1f2a33;--mute:#5e6b75;--line:rgba(28,58,82,.14);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,90vw);margin:0 auto}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--berry)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.3rem,5vw,4rem);color:var(--bay)}
+h2 em{font-style:italic;color:var(--berry)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.7rem;border-radius:999px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:.3s}
+.btn-light{background:var(--cream);color:var(--bay)}.btn-light:hover{background:#fff}
+.btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-bay{background:var(--bay);color:#fff}.btn-bay:hover{background:var(--berry)}
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:.35s}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;font-family:var(--serif);font-size:1.35rem;font-weight:600}
+.brand img{width:46px;height:46px;border-radius:50%;background:#fff}
+.nav ul{display:flex;gap:2.2rem;list-style:none}
+.nav ul a{text-decoration:none;color:#fff;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;opacity:.9}
+.nav.solid{background:rgba(250,246,239,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav.solid .brand,.nav.solid ul a{color:var(--bay)}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.nav.solid .menu-btn{color:var(--bay)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:drift 18s ease-out forwards}
+@keyframes drift{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,38,58,.45) 0%,rgba(16,38,58,.1) 35%,rgba(16,38,58,.78) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:clamp(3.5rem,9vh,7rem)}
+.hero .eyebrow{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero h1{font-size:clamp(3rem,8.4vw,7.6rem);margin:1rem 0 1.4rem;max-width:12ch}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero p{max-width:46ch;font-size:clamp(1rem,1.3vw,1.15rem);opacity:.92;font-weight:300}
+.hero .ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2rem}
+.hero-meta{position:absolute;right:5vw;bottom:clamp(3.5rem,9vh,7rem);z-index:2;text-align:right;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;line-height:2;opacity:.85}
+/* strip */
+.strip{background:var(--bay);color:var(--sand);overflow:hidden;white-space:nowrap;padding:1.05rem 0;font-family:var(--serif);font-size:1.35rem;font-style:italic}
+.strip span{display:inline-block;animation:marq 40s linear infinite}
+.strip b{font-style:normal;color:var(--berry-l);margin:0 1.4rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+section{padding:clamp(5rem,11vw,9rem) 0}
+/* story */
+.story .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.story .photos{position:relative;aspect-ratio:4/5}
+.story .photos img{position:absolute;object-fit:cover;border-radius:4px;box-shadow:0 30px 60px -30px rgba(16,38,58,.5)}
+.story .p1{inset:0 22% 14% 0;width:78%;height:86%}
+.story .p2{right:0;bottom:0;width:48%;height:48%;border:8px solid var(--cream)}
+.story h2{margin:1.1rem 0 1.6rem}
+.story p{color:var(--mute);margin-bottom:1.1rem;max-width:52ch}
+.sig{display:flex;gap:2.5rem;margin-top:2.2rem;padding-top:2rem;border-top:1px solid var(--line)}
+.sig div{font-family:var(--serif);font-size:2.6rem;color:var(--bay);line-height:1}
+.sig small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-top:.5rem}
+/* quote */
+.quote{background:var(--sand);text-align:center;padding:clamp(4.5rem,9vw,7.5rem) 0}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.9rem,4.2vw,3.4rem);font-style:italic;color:var(--bay);max-width:22ch;margin:0 auto;line-height:1.15}
+.quote cite{display:block;margin-top:1.8rem;font-style:normal;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--berry)}
+/* offerings */
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3.5rem;flex-wrap:wrap}
+.head p{max-width:40ch;color:var(--mute)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.card{background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 1px 0 var(--line)}
+.card .im{aspect-ratio:4/3;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.card:hover img{transform:scale(1.05)}
+.card .tx{padding:1.6rem 1.6rem 1.9rem}
+.card .n{font-family:var(--serif);font-style:italic;color:var(--berry);font-size:1.05rem}
+.card h3{font-size:1.85rem;color:var(--bay);margin:.3rem 0 .7rem}
+.card p{color:var(--mute);font-size:.95rem}
+.card.wide{grid-column:span 3;display:grid;grid-template-columns:1.2fr 1fr}
+.card.wide .im{aspect-ratio:auto;min-height:340px}
+.card.wide .tx{padding:clamp(2rem,4vw,3.5rem);display:flex;flex-direction:column;justify-content:center}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.tags span{font-size:.75rem;padding:.4rem .85rem;border:1px solid var(--line);border-radius:999px;color:var(--bay)}
+.note{margin-top:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.6rem 2rem;border:1px solid var(--line);border-radius:4px}
+.note p{font-family:var(--serif);font-size:1.4rem;color:var(--bay)}
+.note p em{color:var(--berry)}
+/* gallery */
+.gallery{background:var(--bay-d);color:#fff}
+.gallery h2{color:#fff}.gallery h2 em{color:#e3b6d2}.gallery .eyebrow{color:#e3b6d2}.gallery .head p{color:rgba(255,255,255,.7)}
+.g{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.g figure{position:relative;overflow:hidden;border-radius:3px}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.g figure:hover img{transform:scale(1.05)}
+.g figcaption{position:absolute;left:12px;bottom:10px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(16,38,58,.6);padding:.3rem .6rem;border-radius:2px}
+.g .a{grid-column:span 2;grid-row:span 2}.g .b{grid-row:span 2}
+/* visit */
+.visit .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,5rem);align-items:stretch}
+.hours{margin:2rem 0;border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--line)}
+.hours span:last-child{font-family:var(--serif);font-size:1.25rem;color:var(--bay)}
+.addr{font-family:var(--serif);font-size:1.6rem;color:var(--bay);line-height:1.3}
+.small{font-size:.85rem;color:var(--mute);margin-top:.6rem}
+.map{border-radius:4px;overflow:hidden;min-height:440px;background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;filter:saturate(.75) contrast(.95)}
+/* contact */
+.contact{background:linear-gradient(rgba(16,38,58,.82),rgba(16,38,58,.88)),url(stock-boathouse.jpg) center/cover;color:#fff;text-align:center}
+.contact h2{color:#fff;max-width:16ch;margin:1rem auto 1.4rem}.contact h2 em{color:#e3b6d2}
+.contact .eyebrow{color:#e3b6d2}
+.contact p{max-width:52ch;margin:0 auto;opacity:.85}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin:3rem auto 0}
+.ways a{display:block;text-decoration:none;padding:1.8rem 1rem;border:1px solid rgba(255,255,255,.25);border-radius:4px;transition:.3s}
+.ways a:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.ways small{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-bottom:.5rem}
+.ways strong{font-family:var(--serif);font-weight:500;font-size:1.35rem;word-break:break-word}
+footer{background:var(--bay-d);color:rgba(255,255,255,.7);padding:3.5rem 0 2.5rem;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:center}
+footer .brand{color:#fff}
+/* reveal (progressive: hidden only when JS adds .js) */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.strip span,.hero img.bg{animation:none}}
+/* responsive */
+@media (max-width:960px){
+ .nav ul{display:none;position:absolute;top:78px;left:0;right:0;flex-direction:column;gap:0;background:var(--cream);padding:1rem 5vw 1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+ .nav ul.open{display:flex}.nav ul a{color:var(--bay);display:block;padding:.9rem 0;border-bottom:1px solid var(--line)}
+ .menu-btn{display:block}
+ .story .grid,.visit .grid{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr 1fr}.card.wide{grid-column:span 2;grid-template-columns:1fr}
+ .card.wide .im{min-height:260px}
+ .g{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.g .a{grid-column:span 2}
+ .hero-meta{display:none}
+}
+@media (max-width:600px){
+ .cards{grid-template-columns:1fr}.card.wide{grid-column:auto}
+ .ways{grid-template-columns:1fr}
+ .brand span{font-size:1.15rem}
+ .sig{gap:1.5rem}.sig div{font-size:2.1rem}
+ .note{padding:1.4rem}
+ .map,.map iframe{min-height:320px}
+}
+</style>
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap">
+ <a class="brand" href="#top"><img src="mbb-logo.png" alt="Maine Bay &amp; Berry logo"><span>Maine Bay &amp; Berry</span></a>
+ <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
+ <ul id="menu"><li><a href="#story">Our Story</a></li><li><a href="#offer">What We Offer</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Visit</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></header>
+
+<section class="hero" id="top" style="padding:0">
+ <img class="bg" src="mbb-surf-rocks.jpg" alt="Waves breaking on the rocky Maine coast">
+ <div class="wrap">
+  <div class="eyebrow rv">State College, PA &nbsp;&middot;&nbsp; Since 2017</div>
+  <h1 class="rv">The Maine coast, <em>brought home.</em></h1>
+  <p class="rv">Fresh seafood driven down from Maine, alongside wild blueberries and handmade goods from small Maine businesses. A little piece of Down East in Central Pennsylvania.</p>
+  <div class="ctas rv"><a class="btn btn-light" href="#visit">Visit the market</a><a class="btn btn-ghost" href="#contact">Call to order</a></div>
+ </div>
+ <div class="hero-meta">201 Elmwood Street<br>Mon to Sat &middot; 10 to 6:30<br>Sun &middot; 11:30 to 4:30</div>
+</section>
+
+<div class="strip" aria-hidden="true"><span>Lobster <b>&#10022;</b> Scallops <b>&#10022;</b> Oysters <b>&#10022;</b> Wild Maine blueberries <b>&#10022;</b> Jams &amp; syrups <b>&#10022;</b> Blueberry soda <b>&#10022;</b> Handmade soaps <b>&#10022;</b> Lobster <b>&#10022;</b> Scallops <b>&#10022;</b> Oysters <b>&#10022;</b> Wild Maine blueberries <b>&#10022;</b> Jams &amp; syrups <b>&#10022;</b> Blueberry soda <b>&#10022;</b> Handmade soaps <b>&#10022;</b></span></div>
+
+<section class="story" id="story"><div class="wrap grid">
+ <div class="photos rv"><img class="p1" src="mbb-harbor-buoys.jpg" alt="Buoys on a Maine harbor shack at dusk"><img class="p2" src="mbb-shoreline.jpg" alt="Rocky Maine shoreline at low tide"></div>
+ <div>
+  <div class="eyebrow rv">Our Story</div>
+  <h2 class="rv">From Winter Harbor <em>to Elmwood Street.</em></h2>
+  <p class="rv">Shaun grew up in Winter Harbor, Maine, where the bay was part of everyday life. Years later, while teaching at Penn State, every trip home ended with a truck full of lobster, scallops and blueberries for friends who could not find anything like it in Central PA.</p>
+  <p class="rv">Christa kept saying it should be a business. In August 2017 it became one. Today Maine Bay &amp; Berry partners with more than 15 small Maine businesses, so the seafood and the goods on our shelves come from people we know and trust.</p>
+  <div class="sig rv"><div>2017<small>Founded</small></div><div>15+<small>Maine partners</small></div><div>12 hr<small>Drive from the coast</small></div></div>
+ </div>
+</div></section>
+
+<div class="quote"><div class="wrap rv">
+ <blockquote>&ldquo;I literally go onto the boat and pull the lobsters out of the water myself.&rdquo;</blockquote>
+ <cite>Shaun Knight, co-owner &middot; as told to Town&amp;Gown</cite>
+</div></div>
+
+<section class="offer" id="offer"><div class="wrap">
+ <div class="head"><div><div class="eyebrow rv">What We Offer</div><h2 class="rv" style="margin-top:1rem">Of the bay, <em>and of the berry.</em></h2></div>
+ <p class="rv">Selection changes with every run to the coast. Stop in, or give us a call to see what came in this week.</p></div>
+ <div class="cards">
+  <article class="card wide rv"><div class="im"><img src="stock-lobster.jpg" alt="Steamed Maine lobsters"></div><div class="tx"><span class="n">The Bay</span><h3>Fresh New England seafood</h3><p>Live lobster and crab, sea scallops, oysters, littleneck clams, salmon and more, sourced from fishermen and small businesses Shaun knows personally.</p><div class="tags"><span>Live lobster</span><span>Scallops</span><span>Oysters</span><span>Clams</span><span>Salmon</span></div></div></article>
+  <article class="card rv"><div class="im"><img src="stock-wild-blueberries.jpg" alt="Wild Maine blueberries on the bush"></div><div class="tx"><span class="n">The Berry</span><h3>Wild Maine blueberries</h3><p>The little ones Maine is famous for, plus the jams, syrups and treats made from them.</p></div></article>
+  <article class="card rv"><div class="im"><img src="stock-blueberry-pie.jpg" alt="Lattice blueberry pie"></div><div class="tx"><span class="n">The Pantry</span><h3>Maine-made goods</h3><p>Jams, syrups, cooking sauces and nationally recognized pies from small Maine producers.</p></div></article>
+  <article class="card rv"><div class="im"><img src="stock-oysters.jpg" alt="Oysters on ice with lemon"></div><div class="tx"><span class="n">The Extras</span><h3>A little something more</h3><p>Craft root beer, wild blueberry soda, homemade soaps, and blueberry dog treats for the four-legged regulars.</p></div></article>
+ </div>
+ <div class="note rv"><p>Want something set aside? <em>Call or message us</em> and we will have it ready.</p><a class="btn btn-bay" href="tel:+18149541560">814.954.1560</a></div>
+</div></section>
+
+<section class="gallery" id="gallery"><div class="wrap">
+ <div class="head"><div><div class="eyebrow rv">Gallery</div><h2 class="rv" style="margin-top:1rem">A taste of <em>Down East.</em></h2></div><p class="rv">Scenes from the coast that inspires everything we carry.</p></div>
+ <div class="g rv">
+  <figure class="a"><img src="mbb-surf-rocks.jpg" alt="Surf on Maine rocks"></figure>
+  <figure class="b"><img src="mbb-harbor-buoys.jpg" alt="Harbor buoys at dusk"></figure>
+  <figure><img src="stock-lobster.jpg" alt="Maine lobster"></figure>
+  <figure><img src="mbb-shoreline.jpg" alt="Maine shoreline"></figure>
+  <figure><img src="stock-wild-blueberries.jpg" alt="Wild blueberries"></figure>
+  <figure><img src="stock-boathouse.jpg" alt="Maine boathouse"></figure>
+  <figure class="a" style="grid-row:span 1"><img src="stock-blueberry-pie.jpg" alt="Blueberry pie"></figure>
+ </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap grid">
+ <div>
+  <div class="eyebrow rv">Where to Find Us</div>
+  <h2 class="rv" style="margin:1rem 0 1.6rem">Come say <em>hello.</em></h2>
+  <p class="addr rv">201 Elmwood Street<br>State College, PA 16801</p>
+  <div class="hours rv"><div><span>Monday to Saturday</span><span>10am to 6:30pm</span></div><div><span>Sunday</span><span>11:30am to 4:30pm</span></div><div><span>Major holidays</span><span>Closed</span></div></div>
+  <p class="small rv">Ordering fresh product for pickup? Call or message by 5pm Wednesday for guaranteed Thursday pickup.</p>
+  <div class="rv" style="margin-top:1.8rem"><a class="btn btn-bay" target="_blank" rel="noopener" href="https://maps.google.com/?q=201+Elmwood+Street,+State+College,+PA+16801">Get directions</a></div>
+ </div>
+ <div class="map rv"><iframe title="Map to Maine Bay & Berry" loading="lazy" src="https://maps.google.com/maps?q=201%20Elmwood%20Street%2C%20State%20College%2C%20PA%2016801&z=15&output=embed"></iframe></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+ <div class="eyebrow rv">Contact</div>
+ <h2 class="rv">Questions, special requests, <em>or a big order?</em></h2>
+ <p class="rv">Reach out and we will get back to you. Check our Facebook page for this week's fresh arrivals.</p>
+ <div class="ways rv">
+  <a href="tel:+18149541560"><small>Call</small><strong>814.954.1560</strong></a>
+  <a href="mailto:mainebayandberry@gmail.com"><small>Email</small><strong>mainebayandberry@gmail.com</strong></a>
+  <a href="https://www.facebook.com/search/top?q=maine%20bay%20and%20berry" target="_blank" rel="noopener"><small>Follow</small><strong>Facebook</strong></a>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <a class="brand" href="#top"><img src="mbb-logo.png" alt=""><span>Maine Bay &amp; Berry Co.</span></a>
+ <div>201 Elmwood Street, State College, PA 16801 &middot; &copy; <span id="yr">2026</span></div>
+</div></footer>
+
+<script>
+document.documentElement.classList.add('js');
+const nav=document.getElementById('nav'),menu=document.getElementById('menu'),btn=document.getElementById('menuBtn');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>40||menu.classList.contains('open'));
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+btn.onclick=()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu';onScroll()};
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.remove('open');btn.textContent='Menu';onScroll()});
+document.getElementById('yr').textContent=new Date().getFullYear();
+if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.rv').forEach(el=>io.observe(el))}else document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+</script>
+</body>
+</html>
